@@ -29,6 +29,27 @@
         </button>
     </div>
 
+    <h1>Deber</h1>
+
+    <div id="myDIV" style="display: none">
+        <button>Me gusta</button>
+        <button>Me emputa</button>
+        <button>Me enflorece</button>
+    </div>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById('myDIV');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
+
     <!--
     <div>
         <h1 id="uno">Primer H1</h1>
