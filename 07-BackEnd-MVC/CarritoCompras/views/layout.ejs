@@ -29,11 +29,21 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/MisEstilos.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <!--STYLES END-->
   </head>
 
   <body>
-    <%- body %>
+    <%- partial('header.ejs') %>
+
+    <div class="container">
+      <%- body %>
+    </div>
+
+
+    <%- partial('footer.ejs') %>
 
 
 
@@ -59,6 +69,7 @@
     -->
 
     <!--TEMPLATES-->
+    
     <!--TEMPLATES END-->
 
 
@@ -86,6 +97,8 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

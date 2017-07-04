@@ -23,7 +23,12 @@ Levantar el servidor en otro puerto
 ```
 > sails lift --port 8080
 ```
-Crear un controlador
+Comando para crear un controlador
 ```
 > sails generate controller nombre_controller
+```
+
+Comando para crear modelos
+```
+> sails generate model nombre_modelo
 ```
