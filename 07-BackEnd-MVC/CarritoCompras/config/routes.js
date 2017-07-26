@@ -31,17 +31,21 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-  // Cuando no se necesita seguridad
-  '/': {
-    view: 'homepage'
+  //No necesitan seguridad (libres)
+
+  'get /': 'VistaController.homepage',
+
+  '/perfil':{
+    view:'UsuarioGestion/perfil'
   },
-  '/perfil': {
-    view: 'UsuarioGestion/perfil'
-  },
+
   'get /ContenidoOculto':
     'VistaController.vistaOculta',
-
-
+  //routes.js
+  'get /crearUsuario':
+    'VistaController.crearUsuario',
+  'get /editarUsuario':
+    'VistaController.editarUsuario',
 
   /***************************************************************************
   *                                                                          *

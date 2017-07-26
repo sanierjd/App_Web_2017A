@@ -4,21 +4,23 @@
 declare var module:any;
 
 module.exports = {
+
   attributes:{
-    nombre:{
-      type: "string"
+    nombres:{
+      type:"string"
     },
-    apellido:{
-      type: "string"
+    apellidos:{
+      type:"string"
     },
     password:{
-      type: "string"
+      type:"string"
     },
     correo:{
-      type: "email"
+      type:"email"
     },
     fechaNacimiento:{
-      type: "date"
+      type:"date"
     }
   }
-}
+
+};

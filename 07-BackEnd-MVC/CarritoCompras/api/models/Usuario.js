@@ -1,9 +1,9 @@
 module.exports = {
     attributes: {
-        nombre: {
+        nombres: {
             type: "string"
         },
-        apellido: {
+        apellidos: {
             type: "string"
         },
         password: {
