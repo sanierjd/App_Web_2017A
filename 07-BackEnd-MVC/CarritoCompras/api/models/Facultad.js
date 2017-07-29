@@ -12,8 +12,14 @@ module.exports = {
       type: 'string',
       required: true
     },
-    fkIdUniverdidad: {
-      model: 'Universidad'
+    fkIdUniversidad: {
+      model: 'Universidad',
+      required: true
+    },
+
+    departamentos: {
+      collection: 'Departamento',
+      via: 'fkIdFacultad'
     }
   }
 };

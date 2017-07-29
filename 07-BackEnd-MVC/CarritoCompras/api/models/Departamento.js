@@ -11,7 +11,17 @@ module.exports = {
     nombre: {
       type: 'string',
       required: true
+    },
+    fkIdFacultad: {
+      model: 'Facultad',
+      required: true
+    },
+
+    carreras: {
+      collection: 'Carrera',
+      via: 'fkIdDepartamemto'
     }
+
   }
 };
 

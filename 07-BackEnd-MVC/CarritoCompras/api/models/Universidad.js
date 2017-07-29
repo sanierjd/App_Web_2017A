@@ -28,7 +28,7 @@ module.exports = {
 
     facultades: {
       collection: 'Facultad', // Tabla con la que nos relacionamos
-      via: 'fkIdUniverdidad'
+      via: 'fkIdUniversidad'
     }
   }
 };
