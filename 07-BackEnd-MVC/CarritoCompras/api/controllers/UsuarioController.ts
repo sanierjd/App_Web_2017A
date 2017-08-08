@@ -55,6 +55,67 @@ module.exports = {
     } else {
       return res.badRequest();
     }
+  },
+
+  AnadirUsuarioCarrito:(req,res)=>{
+    let parametros = req.allParams();
+
+    if(parametros.id){
+      let cookies = req.cookies;
+      console.log(cookies);
+
+      if(cookies.arregloUsuarios){
+
+        let arregloUsuarios = cookies.arregloUsuarios.idsCliente;
+
+        sails.log.info(arregloUsuarios);
+
+        let existeUsuario = arregloUsuarios.find(
+          (idUsuario)=>{
+            return idUsuario == parametros.id;
+          }
+        );
+        /*
+         let existeUsuario;
+         for(let i=0;i<arregloUsuarios.length;i++){
+         if(arregloUsuarios[i]==parametros.id){
+         existeUsuario = parametros.id;
+         }
+         }/////////////////////////
+         */
+        console.log(existeUsuario);
+        if(existeUsuario){
+
+          return res.redirect('/');
+
+        }else{
+
+          arregloUsuarios.push(parametros.id);
+
+          res.cookie('arregloUsuarios',{
+            idsCliente:arregloUsuarios
+          });
+
+
+          return res.redirect('/');
+        }
+      } else{
+
+        let arregloUsuarios = [];
+
+        arregloUsuarios.push(parametros.id);
+
+        res.cookie('arregloUsuarios',{
+          idsCliente:arregloUsuarios
+        });
+
+        return res.redirect('/');
+      }
+
+    }else{
+      return res.badRequest('No envia parametros');
+    }
+
   }
 
 };

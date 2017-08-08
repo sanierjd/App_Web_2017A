@@ -1,7 +1,13 @@
 <h1>Homepage</h1>
 
-
-
+<% if(typeof arregloUsuarios != 'undefined') { %>
+<h3>Lista arreglo Usuarios</h3>
+<ul>
+  <% for(var j=0; j<arregloUsuarios.length; j++) {%>
+  <li> Id Usuario: <%=arregloUsuarios[j] %></li>
+  <% } %>
+</ul>
+<% } %>
 <h2>Crear Usuario</h2>
 <div class="form-group row">
   <label for="nombres" class="col-4 col-form-label">
@@ -55,6 +61,17 @@
           Editar
         </button>
       </a>
+    </form>
+
+    <form action="/Usuario/AnadirUsuarioCarrito" method="post">
+      <input hidden
+             type="text"
+             value="<%=usuarios[i].id%>"
+             name="id">
+      <button  type="submit"
+               class="btn btn-outline-primary">Añadir usuario al carrito</button>
+
+
     </form>
 
 
